@@ -1,22 +1,29 @@
-NAudio.Vorbis    [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/naudio/Vorbis?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
--------
+# music-player
 
-NAudio.Vorbis is a convenience wrapper to enable easy integration of [NVorbis](https://github.com/ioctlLR/NVorbis) into NAudio projects.
+## 简介
 
-To use:
+music-player是一个通过c# winform编写的一个音乐播放器，支持mp3、flac、avi、ogg等格式。
 
-```cs
-// add a reference to NVorbis.dll
-// add a reference to NAudio.Vorbis.dll
+本项目只完成了音乐播放器的大体UI框架以及音乐播放的主体功能，仅作学习参考。
 
-using (var vorbisStream = new NAudio.Vorbis.VorbisWaveReader("path/to/file.ogg"))
-using (var waveOut = new NAudio.Wave.WaveOutEvent())
-{
-    waveOut.Init(vorbisStream);
-    waveOut.Play();
-   
-    // wait here until playback stops or should stop
-}
+## 效果预览
+
+![image-20240507204138122](C:\Users\Lu Xiao\AppData\Roaming\Typora\typora-user-images\image-20240507204138122.png)
+
+![image-20240507204147115](C:\Users\Lu Xiao\AppData\Roaming\Typora\typora-user-images\image-20240507204147115.png)
+
+## 使用说明
+
+### 1 在vs中下载必要插件
+
+![image-20240507204735147](C:\Users\Lu Xiao\AppData\Roaming\Typora\typora-user-images\image-20240507204735147.png)
+
+![image-20240507204836353](C:\Users\Lu Xiao\AppData\Roaming\Typora\typora-user-images\image-20240507204836353.png)
+
+### 2 拉取项目代码
+
+```
+git clone https://github.com/hespecial/music-player.git
 ```
 
-If you have any questions or comments, feel free to join us on Gitter.  If you have any issues or feature requests, please submit them in the issue tracker.
+### 3 启动项目
